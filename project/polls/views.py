@@ -25,9 +25,7 @@ def site(request):
         return redirect('./company')  
     else: return render(request, 'login.html')
     
-def locale(request):
-    output = _("Welcome to my site.")
-    return HttpResponse(settings.LOCALE_PATHS) 
+
 
 def company(request):
     cid=request.POST.get("company","")
